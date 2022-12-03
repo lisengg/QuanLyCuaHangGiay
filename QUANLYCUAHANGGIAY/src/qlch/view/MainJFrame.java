@@ -22,7 +22,7 @@ public class MainJFrame extends javax.swing.JFrame {
         listItem.add(new DanhMuc("NhanVien", jpnNhanVien, lblNhanVien));
         listItem.add(new DanhMuc("KhachHang", jpnKhachHang, lblKhachHang));
         listItem.add(new DanhMuc("ThongKe", jpnThongKe, lblThongKe));
-        listItem.add(new DanhMuc("ThanhToan", jpnThanhToan, lblThanhToan));
+        listItem.add(new DanhMuc("BanHang", jpnBanHang, lblBanHang));
         listItem.add(new DanhMuc("HoaDon", jpnHoaDon, lblHoaDon));
 
         control.setEvent(listItem);
@@ -43,8 +43,8 @@ public class MainJFrame extends javax.swing.JFrame {
         lblKhachHang = new javax.swing.JLabel();
         jpnThongKe = new javax.swing.JPanel();
         lblThongKe = new javax.swing.JLabel();
-        jpnThanhToan = new javax.swing.JPanel();
-        lblThanhToan = new javax.swing.JLabel();
+        jpnBanHang = new javax.swing.JPanel();
+        lblBanHang = new javax.swing.JLabel();
         jpnNhanVien = new javax.swing.JPanel();
         lblNhanVien = new javax.swing.JLabel();
         jpnTrangChu = new javax.swing.JPanel();
@@ -125,23 +125,23 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lblThanhToan.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lblThanhToan.setText("Thanh toán");
+        lblBanHang.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblBanHang.setText("Bán hàng");
 
-        javax.swing.GroupLayout jpnThanhToanLayout = new javax.swing.GroupLayout(jpnThanhToan);
-        jpnThanhToan.setLayout(jpnThanhToanLayout);
-        jpnThanhToanLayout.setHorizontalGroup(
-            jpnThanhToanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnThanhToanLayout.createSequentialGroup()
-                .addGap(113, 113, 113)
-                .addComponent(lblThanhToan)
+        javax.swing.GroupLayout jpnBanHangLayout = new javax.swing.GroupLayout(jpnBanHang);
+        jpnBanHang.setLayout(jpnBanHangLayout);
+        jpnBanHangLayout.setHorizontalGroup(
+            jpnBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnBanHangLayout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addComponent(lblBanHang)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jpnThanhToanLayout.setVerticalGroup(
-            jpnThanhToanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpnThanhToanLayout.createSequentialGroup()
+        jpnBanHangLayout.setVerticalGroup(
+            jpnBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpnBanHangLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblThanhToan)
+                .addComponent(lblBanHang)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -219,7 +219,7 @@ public class MainJFrame extends javax.swing.JFrame {
             .addComponent(jpnSanPham, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnKhachHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnThongKe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jpnThanhToan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpnBanHang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jpnNhanVien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
                 .addGap(90, 90, 90)
@@ -249,7 +249,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jpnHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jpnThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpnBanHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jpnThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(95, Short.MAX_VALUE))
@@ -334,21 +334,21 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jpnBanHang;
     private javax.swing.JPanel jpnHoaDon;
     private javax.swing.JPanel jpnKhachHang;
     private javax.swing.JPanel jpnMenu;
     private javax.swing.JPanel jpnNhanVien;
     private javax.swing.JPanel jpnSanPham;
-    private javax.swing.JPanel jpnThanhToan;
     private javax.swing.JPanel jpnThongKe;
     private javax.swing.JPanel jpnTrangChu;
     private javax.swing.JPanel jpnView;
     private keeptoo.KGradientPanel kGradientPanel1;
+    private javax.swing.JLabel lblBanHang;
     private javax.swing.JLabel lblHoaDon;
     private javax.swing.JLabel lblKhachHang;
     private javax.swing.JLabel lblNhanVien;
     private javax.swing.JLabel lblSanPham;
-    private javax.swing.JLabel lblThanhToan;
     private javax.swing.JLabel lblThongKe;
     private javax.swing.JLabel lblTrangChu;
     // End of variables declaration//GEN-END:variables

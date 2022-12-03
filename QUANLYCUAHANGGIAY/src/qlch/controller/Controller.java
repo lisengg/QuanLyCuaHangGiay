@@ -8,6 +8,7 @@ import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import qlch.danhmuc.DanhMuc;
+import qlch.view.BanHangPanel;
 import qlch.view.HoaDonPanel;
 import qlch.view.KhachHangPanel;
 import qlch.view.NhanVienPanel;
@@ -76,8 +77,8 @@ public class Controller {
                 case "ThongKe":
                     node = new ThongKePanel();
                     break;
-                case "ThanhToan":
-                    node = new ThanhToanPanel();
+                case "BanHang":
+                    node = new BanHangPanel();
                     break;
                 case "NhanVien":
                     node = new NhanVienPanel();

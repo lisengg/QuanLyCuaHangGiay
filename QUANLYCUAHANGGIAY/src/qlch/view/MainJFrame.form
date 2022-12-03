@@ -82,7 +82,7 @@
                       <Component id="jpnSanPham" max="32767" attributes="0"/>
                       <Component id="jpnKhachHang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jpnThongKe" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jpnThanhToan" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jpnBanHang" alignment="0" max="32767" attributes="0"/>
                       <Component id="jpnNhanVien" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
@@ -115,7 +115,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jpnHoaDon" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jpnThanhToan" min="-2" max="-2" attributes="0"/>
+                          <Component id="jpnBanHang" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="jpnThongKe" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="95" max="32767" attributes="0"/>
@@ -223,14 +223,14 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="jpnThanhToan">
+                <Container class="javax.swing.JPanel" name="jpnBanHang">
 
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                              <Component id="lblThanhToan" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="lblBanHang" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -239,19 +239,19 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblThanhToan" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblBanHang" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="lblThanhToan">
+                    <Component class="javax.swing.JLabel" name="lblBanHang">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Thanh to&#xe1;n"/>
+                        <Property name="text" type="java.lang.String" value="B&#xe1;n h&#xe0;ng"/>
                       </Properties>
                     </Component>
                   </SubComponents>
