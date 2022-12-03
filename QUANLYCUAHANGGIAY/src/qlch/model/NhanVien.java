@@ -15,6 +15,19 @@ public class NhanVien {
     private String SDT;
     private String MaCV;
     private String HinhAnh;
+    private boolean vaiTro;
+
+    public boolean isVaiTro() {
+        return vaiTro;
+    }
+
+    public void setVaiTro(boolean vaiTro) {
+        this.vaiTro = vaiTro;
+    }
+
+    public NhanVien(boolean vaiTro) {
+        this.vaiTro = vaiTro;
+    }
 
     public NhanVien() {
     }

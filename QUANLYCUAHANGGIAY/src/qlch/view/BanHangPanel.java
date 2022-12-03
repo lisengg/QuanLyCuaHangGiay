@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Vector;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import qlch.model.BanHang;
@@ -33,6 +34,10 @@ public class BanHangPanel extends javax.swing.JPanel {
         LoadDataSanPham();
         tblGioHang.setModel(modelGH);
 
+    }
+
+    public BanHangPanel(JLabel lblTongTienHang) {
+        this.lblTongTienHang = lblTongTienHang;
     }
 
     void LoadDataSanPham() {
@@ -383,7 +388,10 @@ public class BanHangPanel extends javax.swing.JPanel {
                 tblGioHang.setModel(modelGH);
                 tongTienHang = tongTienHang + ThanhTien;
                 lblTongTienHang.setText(String.valueOf(tongTienHang));
-                
+
+                Thanhtoan.TongTien = lblTongTienHang.getText();
+
+
             }
 
         } catch (NumberFormatException e) {
@@ -395,8 +403,8 @@ public class BanHangPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnThemSPMouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        NewJFrame f = new NewJFrame();
-        f.setVisible(true);
+        Thanhtoan thanhtoan = new Thanhtoan();
+        thanhtoan.setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
 
 

@@ -13,9 +13,13 @@ public class ThanhToanPanel extends javax.swing.JPanel {
     String operandl = "";
     String operator = "";   
     boolean isEqualsPress = false;
+    static ThanhToanPanel thanhtoan;
+    static String TongTien;
 
     public ThanhToanPanel() {
+        thanhtoan=this;
         initComponents();
+        txtTongTien.setText(TongTien);
 
 //        txtTongTien.setText("0");
     }
