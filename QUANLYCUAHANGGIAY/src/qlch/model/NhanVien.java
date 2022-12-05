@@ -9,6 +9,7 @@ package qlch.model;
  * @author PC
  */
 public class NhanVien {
+
     private String MaNV;
     private String TenNV;
     private String ThamNien;
@@ -16,6 +17,19 @@ public class NhanVien {
     private String MaCV;
     private String HinhAnh;
     private boolean vaiTro;
+    private String MatKhau;
+
+    public String getMatKhau() {
+        return MatKhau;
+    }
+
+    public void setMatKhau(String MatKhau) {
+        this.MatKhau = MatKhau;
+    }
+
+    public NhanVien(String MatKhau) {
+        this.MatKhau = MatKhau;
+    }
 
     public boolean isVaiTro() {
         return vaiTro;
@@ -88,6 +102,5 @@ public class NhanVien {
     public void setHinhAnh(String HinhAnh) {
         this.HinhAnh = HinhAnh;
     }
-    
-    
+
 }
