@@ -12,20 +12,20 @@ import qlch.connection.DBConnection;
  * @author PC
  */
 public class NhanVienDAO extends MainDAO<NhanVien, String>{
-    final String INSERT_SQL = "INSERT INTO NHANVIEN(MANV, TENNV, THAMNIEN, SDT, MACV, HINHANH) values(?,?,?,?,?,?)";
-    final String UPDATE_SQL = "UPDATE NHANVIEN set TENNV = ?, THAMNIEN = ?, SDT = ?, MACV = ?, HINHANH = ? WHERE MANV = ?";
+    final String INSERT_SQL = "INSERT INTO NHANVIEN(MANV, TENNV, THAMNIEN, SDT, MACV, CONGVIEC, HINHANH, TAIKHOAN, MATKHAU) values(?,?,?,?,?,?,?,?,?)";
+    final String UPDATE_SQL = "UPDATE NHANVIEN set TENNV = ?, THAMNIEN = ?, SDT = ?, MACV = ?, CONGVIEC = ?, HINHANH = ?, TAIKHOAN = ?, MATKHAU = ? WHERE MANV = ?";
     final String DELETE_SQL = "DELETE FROM NHANVIEN WHERE MANV = ?";
     final String SELECT_ALL_SQL = "SELECT * FROM NHANVIEN";
     final String SELECT_BY_ID_SQL = "SELECT * FROM NHANVIEN WHERE MANV = ?";
     
      @Override
     public void insert(NhanVien entity) {
-        DBConnection.update(INSERT_SQL, entity.getMaNV(), entity.getTenNV(), entity.getThamNien(), entity.getSDT(), entity.getMaCV(), entity.getHinhAnh());
+        DBConnection.update(INSERT_SQL, entity.getMaNV(), entity.getTenNV(), entity.getThamNien(), entity.getSDT(), entity.getMaCV(), entity.getCongViec(), entity.getHinhAnh(), entity.getTaiKhoan(), entity.getMatKhau());
     }
 
     @Override
     public void update(NhanVien entity) {
-        DBConnection.update(UPDATE_SQL, entity.getMaNV(), entity.getTenNV(), entity.getThamNien(), entity.getSDT(), entity.getMaCV(), entity.getHinhAnh());
+        DBConnection.update(UPDATE_SQL, entity.getMaNV(), entity.getTenNV(), entity.getThamNien(), entity.getSDT(), entity.getMaCV(), entity.getCongViec(), entity.getHinhAnh(), entity.getTaiKhoan(), entity.getMatKhau());
     }
 
     @Override
@@ -59,8 +59,10 @@ public class NhanVienDAO extends MainDAO<NhanVien, String>{
                 entity.setThamNien(rs.getString("THAMNIEN"));
                 entity.setSDT(rs.getString("SDT"));
                 entity.setMaCV(rs.getString("MACV"));
+                entity.setCongViec(rs.getString("CONGVIEC"));
                 entity.setHinhAnh(rs.getString("HINHANH"));
-               
+                entity.setTaiKhoan(rs.getString("TAIKHOAN"));
+                entity.setMatKhau(rs.getString("MATKHAU"));
                 list.add(entity);
                  
             }

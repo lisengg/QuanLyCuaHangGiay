@@ -14,31 +14,37 @@ public class NhanVien {
     private String ThamNien;
     private String SDT;
     private String MaCV;
+    private String CongViec;
     private String HinhAnh;
-    private boolean vaiTro;
+    private String TaiKhoan;
+    private String MatKhau;
+    
 
-    public boolean isVaiTro() {
-        return vaiTro;
-    }
-
-    public void setVaiTro(boolean vaiTro) {
-        this.vaiTro = vaiTro;
-    }
-
-    public NhanVien(boolean vaiTro) {
-        this.vaiTro = vaiTro;
-    }
+//    public boolean isVaiTro() {
+//        return vaiTro;
+//    }
+//
+//    public void setVaiTro(boolean vaiTro) {
+//        this.vaiTro = vaiTro;
+//    }
+//
+//    public NhanVien(boolean vaiTro) {
+//        this.vaiTro = vaiTro;
+//    }
 
     public NhanVien() {
     }
 
-    public NhanVien(String MaNV, String TenNV, String ThamNien, String SDT, String MaCV, String HinhAnh) {
+    public NhanVien(String MaNV, String TenNV, String ThamNien, String SDT, String MaCV, String CongViec, String HinhAnh, String TaiKhoan, String MatKhau) {
         this.MaNV = MaNV;
         this.TenNV = TenNV;
         this.ThamNien = ThamNien;
         this.SDT = SDT;
         this.MaCV = MaCV;
+        this.CongViec = CongViec;
         this.HinhAnh = HinhAnh;
+        this.TaiKhoan = TaiKhoan;
+        this.MatKhau = MatKhau;
     }
 
     public String getMaNV() {
@@ -81,6 +87,14 @@ public class NhanVien {
         this.MaCV = MaCV;
     }
 
+    public String getCongViec() {
+        return CongViec;
+    }
+
+    public void setCongViec(String CongViec) {
+        this.CongViec = CongViec;
+    }
+
     public String getHinhAnh() {
         return HinhAnh;
     }
@@ -88,6 +102,24 @@ public class NhanVien {
     public void setHinhAnh(String HinhAnh) {
         this.HinhAnh = HinhAnh;
     }
+
+    public String getTaiKhoan() {
+        return TaiKhoan;
+    }
+
+    public void setTaiKhoan(String TaiKhoan) {
+        this.TaiKhoan = TaiKhoan;
+    }
+
+    public String getMatKhau() {
+        return MatKhau;
+    }
+
+    public void setMatKhau(String MatKhau) {
+        this.MatKhau = MatKhau;
+    }
+
+    
     
     
 }
