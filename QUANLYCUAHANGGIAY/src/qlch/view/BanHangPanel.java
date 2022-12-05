@@ -248,6 +248,11 @@ public class BanHangPanel extends javax.swing.JPanel {
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/qlch/images/Delete.png"))); // NOI18N
         jButton4.setText("Xóa sản phẩm");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
         tblGioHang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -407,6 +412,12 @@ public class BanHangPanel extends javax.swing.JPanel {
         Thanhtoan thanhtoan = new Thanhtoan();
         thanhtoan.setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+      int r = tblGioHang.getSelectedRow();
+      tblGioHang.remove(r);
+      
+    }//GEN-LAST:event_jButton4MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
