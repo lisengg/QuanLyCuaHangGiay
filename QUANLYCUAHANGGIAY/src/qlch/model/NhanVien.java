@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package qlch.model;
 
 /**
@@ -15,7 +12,10 @@ public class NhanVien {
     private String ThamNien;
     private String SDT;
     private String MaCV;
+    private String CongViec;
     private String HinhAnh;
+<<<<<<< HEAD
+=======
     private boolean vaiTro;
     private String MatKhau;
 
@@ -30,29 +30,37 @@ public class NhanVien {
     public NhanVien(String MatKhau) {
         this.MatKhau = MatKhau;
     }
+>>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
 
-    public boolean isVaiTro() {
-        return vaiTro;
-    }
+    private String TaiKhoan;
+    private String MatKhau;
 
-    public void setVaiTro(boolean vaiTro) {
-        this.vaiTro = vaiTro;
-    }
 
-    public NhanVien(boolean vaiTro) {
-        this.vaiTro = vaiTro;
-    }
 
+//    public boolean isVaiTro() {
+//        return vaiTro;
+//    }
+//
+//    public void setVaiTro(boolean vaiTro) {
+//        this.vaiTro = vaiTro;
+//    }
+//
+//    public NhanVien(boolean vaiTro) {
+//        this.vaiTro = vaiTro;
+//    }
     public NhanVien() {
     }
 
-    public NhanVien(String MaNV, String TenNV, String ThamNien, String SDT, String MaCV, String HinhAnh) {
+    public NhanVien(String MaNV, String TenNV, String ThamNien, String SDT, String MaCV, String CongViec, String HinhAnh, String TaiKhoan, String MatKhau) {
         this.MaNV = MaNV;
         this.TenNV = TenNV;
         this.ThamNien = ThamNien;
         this.SDT = SDT;
         this.MaCV = MaCV;
+        this.CongViec = CongViec;
         this.HinhAnh = HinhAnh;
+        this.TaiKhoan = TaiKhoan;
+        this.MatKhau = MatKhau;
     }
 
     public String getMaNV() {
@@ -95,6 +103,14 @@ public class NhanVien {
         this.MaCV = MaCV;
     }
 
+    public String getCongViec() {
+        return CongViec;
+    }
+
+    public void setCongViec(String CongViec) {
+        this.CongViec = CongViec;
+    }
+
     public String getHinhAnh() {
         return HinhAnh;
     }
@@ -103,4 +119,26 @@ public class NhanVien {
         this.HinhAnh = HinhAnh;
     }
 
+<<<<<<< HEAD
+
+
+    public String getTaiKhoan() {
+        return TaiKhoan;
+    }
+
+    public void setTaiKhoan(String TaiKhoan) {
+        this.TaiKhoan = TaiKhoan;
+    }
+
+    public String getMatKhau() {
+        return MatKhau;
+    }
+
+    public void setMatKhau(String MatKhau) {
+        this.MatKhau = MatKhau;
+    }
+
+
+=======
+>>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
 }

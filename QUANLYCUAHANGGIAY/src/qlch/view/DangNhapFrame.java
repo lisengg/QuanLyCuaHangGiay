@@ -10,6 +10,9 @@ import qlch.auth.Auth;
 import qlch.dao.NhanVienDAO;
 import qlch.model.NhanVien;
 
+import qlch.dao.NhanVienDAO;
+import qlch.model.NhanVien;
+
 public class DangNhapFrame extends javax.swing.JFrame {
 
     public DangNhapFrame() {
@@ -24,8 +27,11 @@ public class DangNhapFrame extends javax.swing.JFrame {
     Connection con = null;
     ResultSet rs = null;
     MainJFrame main = new MainJFrame();
+<<<<<<< HEAD
+=======
     
     
+>>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
 
     @SuppressWarnings("unchecked")
 
@@ -252,9 +258,15 @@ public class DangNhapFrame extends javax.swing.JFrame {
 //                lblKhongDung.setText("Tên đăng nhập hoặc mật khẩu không đúng");
 //                lblKhongDung.setForeground(Color.red);
 //            }else{
+<<<<<<< HEAD
+            this.dispose();
+            main.setVisible(true);
+
+=======
                 this.dispose();
                 main.setVisible(true);
             
+>>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
         } catch (Exception e) {
             System.out.println(e);
         }
