@@ -6,7 +6,7 @@ import java.awt.Desktop;
 import java.awt.Frame;
 import java.net.URI;
 import javax.swing.JOptionPane;
-import qlch.auth.Auth;
+
 import qlch.dao.NhanVienDAO;
 import qlch.model.NhanVien;
 
@@ -24,8 +24,6 @@ public class DangNhapFrame extends javax.swing.JFrame {
     Connection con = null;
     ResultSet rs = null;
     MainJFrame main = new MainJFrame();
-    
-    
 
     @SuppressWarnings("unchecked")
 
@@ -252,9 +250,9 @@ public class DangNhapFrame extends javax.swing.JFrame {
 //                lblKhongDung.setText("Tên đăng nhập hoặc mật khẩu không đúng");
 //                lblKhongDung.setForeground(Color.red);
 //            }else{
-                this.dispose();
-                main.setVisible(true);
-            
+            this.dispose();
+            main.setVisible(true);
+
         } catch (Exception e) {
             System.out.println(e);
         }

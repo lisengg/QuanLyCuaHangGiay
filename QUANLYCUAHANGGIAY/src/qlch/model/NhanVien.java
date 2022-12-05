@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package qlch.model;
 
 /**
@@ -17,26 +14,11 @@ public class NhanVien {
     private String MaCV;
     private String CongViec;
     private String HinhAnh;
-<<<<<<< HEAD
+
     private String TaiKhoan;
     private String MatKhau;
-    
-=======
-    private boolean vaiTro;
-    private String MatKhau;
 
-    public String getMatKhau() {
-        return MatKhau;
-    }
 
-    public void setMatKhau(String MatKhau) {
-        this.MatKhau = MatKhau;
-    }
-
-    public NhanVien(String MatKhau) {
-        this.MatKhau = MatKhau;
-    }
->>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
 
 //    public boolean isVaiTro() {
 //        return vaiTro;
@@ -49,7 +31,6 @@ public class NhanVien {
 //    public NhanVien(boolean vaiTro) {
 //        this.vaiTro = vaiTro;
 //    }
-
     public NhanVien() {
     }
 
@@ -121,7 +102,8 @@ public class NhanVien {
         this.HinhAnh = HinhAnh;
     }
 
-<<<<<<< HEAD
+
+
     public String getTaiKhoan() {
         return TaiKhoan;
     }
@@ -138,9 +120,5 @@ public class NhanVien {
         this.MatKhau = MatKhau;
     }
 
-    
-    
-    
-=======
->>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
+
 }
