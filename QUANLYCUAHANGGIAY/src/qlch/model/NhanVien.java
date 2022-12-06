@@ -1,4 +1,3 @@
-
 package qlch.model;
 
 /**
@@ -14,24 +13,6 @@ public class NhanVien {
     private String MaCV;
     private String CongViec;
     private String HinhAnh;
-<<<<<<< HEAD
-=======
-    private boolean vaiTro;
-    private String MatKhau;
-
-    public String getMatKhau() {
-        return MatKhau;
-    }
-
-    public void setMatKhau(String MatKhau) {
-        this.MatKhau = MatKhau;
-    }
-
-    public NhanVien(String MatKhau) {
-        this.MatKhau = MatKhau;
-    }
->>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
-
     private String TaiKhoan;
     private String MatKhau;
 
@@ -119,7 +100,6 @@ public class NhanVien {
         this.HinhAnh = HinhAnh;
     }
 
-<<<<<<< HEAD
 
 
     public String getTaiKhoan() {
@@ -138,7 +118,4 @@ public class NhanVien {
         this.MatKhau = MatKhau;
     }
 
-
-=======
->>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
 }

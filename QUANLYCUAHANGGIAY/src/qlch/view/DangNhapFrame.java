@@ -6,10 +6,6 @@ import java.awt.Desktop;
 import java.awt.Frame;
 import java.net.URI;
 import javax.swing.JOptionPane;
-import qlch.auth.Auth;
-import qlch.dao.NhanVienDAO;
-import qlch.model.NhanVien;
-
 import qlch.dao.NhanVienDAO;
 import qlch.model.NhanVien;
 
@@ -17,21 +13,11 @@ public class DangNhapFrame extends javax.swing.JFrame {
 
     public DangNhapFrame() {
         initComponents();
+
     }
+    static DangNhapFrame dangnhap;
     NhanVienDAO dao = new NhanVienDAO();
-    static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    static String url = "jdbc:sqlserver://localhost:1433;" + "databaseName=duan1;user=teamsix;password=win123;encrypt=true;trustServerCertificate=true";
-    static String user = "teamsix";
-    static String pass = "win123";
-    Statement st = null;
-    Connection con = null;
-    ResultSet rs = null;
     MainJFrame main = new MainJFrame();
-<<<<<<< HEAD
-=======
-    
-    
->>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
 
     @SuppressWarnings("unchecked")
 
@@ -238,37 +224,28 @@ public class DangNhapFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void kGradientPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kGradientPanel2MouseClicked
+
         String taikhoan = txtUser.getText();
+        String matkhau0 = txtPass.getText();
         String matkhau = new String(txtPass.getPassword());
         NhanVien nv = dao.selectByTaiKhoanNhanVien(taikhoan);
 
-        try {
-
-            // Bắt lỗi để trống tên đăng nhập hoặc mật khẩu
-//            if (txtUser.getText().equals("") || txtPass.getPassword().length == 0) {
-//                lblKhongDung.setText("Vui lòng không được để trống tên đăng nhập hoặc mật khẩu");
-//                lblKhongDung.setForeground(Color.red);
-//            }
-//
-//            //Kiểm tra tên và mật khẩu có đúng không
-//            if (taikhoan == null) {
-//                lblKhongDung.setText("Tên đăng nhập hoặc mật khẩu không đúng");
-//                lblKhongDung.setForeground(Color.red);
-//            } else if (!matkhau.equals(nv.getMatKhau())) {
-//                lblKhongDung.setText("Tên đăng nhập hoặc mật khẩu không đúng");
-//                lblKhongDung.setForeground(Color.red);
-//            }else{
-<<<<<<< HEAD
+        //Bắt lỗi để trống tên đăng nhập hoặc mật khẩu
+        if (taikhoan.length() == 0) {
+            lblKhongDung.setText("Vui lòng không được để trống tên đăng nhập hoặc mật khẩu");
+            lblKhongDung.setForeground(Color.red);
+        } else if (matkhau0.length() == 0) {
+            lblKhongDung.setText("Vui lòng không được để trống tên đăng nhập hoặc mật khẩu");
+            lblKhongDung.setForeground(Color.red);
+        } else if (nv == null) {
+            lblKhongDung.setText("Tên đăng nhập hoặc mật khẩu không đúng");
+            lblKhongDung.setForeground(Color.red);
+        } else if (!matkhau.equals(nv.getMatKhau())) {
+            lblKhongDung.setText("Tên đăng nhập hoặc mật khẩu không đúng");
+            lblKhongDung.setForeground(Color.red);
+        } else {
             this.dispose();
             main.setVisible(true);
-
-=======
-                this.dispose();
-                main.setVisible(true);
-            
->>>>>>> 8de8ebbbaa8401fab289187e332c698f49da2a2c
-        } catch (Exception e) {
-            System.out.println(e);
         }
     }//GEN-LAST:event_kGradientPanel2MouseClicked
 

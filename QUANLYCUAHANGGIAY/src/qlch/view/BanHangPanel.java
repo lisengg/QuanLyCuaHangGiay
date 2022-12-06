@@ -371,7 +371,7 @@ public class BanHangPanel extends javax.swing.JPanel {
         int soLuong = (int) jSoLuong.getValue();
         int giatt;
         try {
-            JOptionPane.showMessageDialog(this, "Tên sp: " + TenSP + "\nSize: " + cboSize.getSelectedItem() + "\nSố lượng: " + soLuong);
+
             if (cboSize.getSelectedItem().equals("Chọn size...")) {
                 JOptionPane.showMessageDialog(this, "Vui lòng chọn size!!");
             } else if (jSoLuong.getValue().toString().equals("0")) {
@@ -397,7 +397,6 @@ public class BanHangPanel extends javax.swing.JPanel {
 
                 Thanhtoan.TongTien = lblTongTienHang.getText();
 
-
             }
 
         } catch (NumberFormatException e) {
@@ -414,9 +413,9 @@ public class BanHangPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-      int r = tblGioHang.getSelectedRow();
-      tblGioHang.remove(r);
-      
+        int r = tblGioHang.getSelectedRow();
+        tblGioHang.remove(r);
+
     }//GEN-LAST:event_jButton4MouseClicked
 
 

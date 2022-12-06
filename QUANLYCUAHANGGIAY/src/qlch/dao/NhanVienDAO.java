@@ -17,7 +17,7 @@ public class NhanVienDAO extends MainDAO<NhanVien, String>{
     final String DELETE_SQL = "DELETE FROM NHANVIEN WHERE MANV = ?";
     final String SELECT_ALL_SQL = "SELECT * FROM NHANVIEN";
     final String SELECT_BY_ID_SQL = "SELECT * FROM NHANVIEN WHERE MANV = ?";
-    final String SELECT_BY_TAIKHOAN_SQL = "select taikhoan,matkhau,tencv from NHANVIEN inner join CHUCVU on nhanvien.MACV=CHUCVU.macv where taikhoan = ?";
+    final String SELECT_BY_TAIKHOAN_SQL = "SELECT * FROM NHANVIEN WHERE TAIKHOAN = ?";
     
      @Override
     public void insert(NhanVien entity) {

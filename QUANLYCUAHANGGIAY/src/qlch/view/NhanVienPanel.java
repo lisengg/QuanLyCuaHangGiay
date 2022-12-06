@@ -32,7 +32,7 @@ public class NhanVienPanel extends javax.swing.JPanel {
     public NhanVienPanel() {
         initComponents();
         loaddatajtable();
-        fillTable();
+//        fillTable();
     }
 
     String strHinh = null;
