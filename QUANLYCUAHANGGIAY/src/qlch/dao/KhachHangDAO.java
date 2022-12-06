@@ -12,20 +12,20 @@ import qlch.connection.DBConnection;
  * @author TD
  */
 public class KhachHangDAO extends MainDAO<KhachHang, String>{
-     final String INSERT_SQL = "INSERT INTO KHACHHANG(MAKH, TENKH, SDT, TONGDIEM, NGUOITAO) values(?,?,?,?,?)";
-    final String UPDATE_SQL = "UPDATE KHACHHANG set TENKH = ?, SDT = ?, TONGDIEM = ?, NGUOITAO = ? WHERE MAKH = ?";
+     final String INSERT_SQL = "INSERT INTO KHACHHANG(MAKH, TENKH, SDT, TONGDIEM) values(?,?,?,?)";
+    final String UPDATE_SQL = "UPDATE KHACHHANG set TENKH = ?, SDT = ?, TONGDIEM = ? WHERE MAKH = ?";
     final String DELETE_SQL = "DELETE FROM KHACHHANG WHERE MAKH = ?";
     final String SELECT_ALL_SQL = "SELECT * FROM KHACHHANG";
     final String SELECT_BY_ID_SQL = "SELECT * FROM KHACHHANG WHERE MAKH = ?";
 
     @Override
     public void insert(KhachHang entity) {
-       DBConnection.update(INSERT_SQL, entity.getMakh(), entity.getTenkh(), entity.getSdt(), entity.getTongdiem(), entity.getNguoiTao());
+       DBConnection.update(INSERT_SQL, entity.getMakh(), entity.getTenkh(), entity.getSdt(), entity.getTongdiem());
     }
 
     @Override
     public void update(KhachHang entity) {
-        DBConnection.update(UPDATE_SQL, entity.getMakh(), entity.getTenkh(), entity.getSdt(), entity.getTongdiem(), entity.getNguoiTao());
+        DBConnection.update(UPDATE_SQL, entity.getMakh(), entity.getTenkh(), entity.getSdt(), entity.getTongdiem());
     }
 
     @Override
@@ -58,8 +58,6 @@ public class KhachHangDAO extends MainDAO<KhachHang, String>{
                 entity.setTenkh(rs.getString("TENKH"));
                 entity.setSdt(rs.getString("SDT"));
                 entity.setTongdiem(rs.getInt("TONGDIEM"));
-                entity.setNguoiTao(rs.getString("NGUOITAO"));
-               
                 list.add(entity);
                  
             }

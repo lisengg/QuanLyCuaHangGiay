@@ -27,7 +27,7 @@ public class Validation {
     }
      public static boolean isPhone(JTextField txtField,String msg){
         String txtValue = txtField.getText().trim();
-        String strPtn = "0\\d{9,10}";
+        String strPtn = "0\\d{9}";
         boolean exp = (!txtValue.matches(strPtn));
         return showMessage(txtField, msg, exp); 
     }
