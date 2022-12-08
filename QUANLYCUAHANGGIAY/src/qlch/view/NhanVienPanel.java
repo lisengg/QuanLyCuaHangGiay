@@ -15,6 +15,7 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.ButtonModel;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -32,7 +33,9 @@ public class NhanVienPanel extends javax.swing.JPanel {
     public NhanVienPanel() {
         initComponents();
         loaddatajtable();
-//        fillTable();
+        fillTable();
+        txtMaCV.disable();
+        
     }
 
     String strHinh = null;
@@ -185,17 +188,20 @@ public class NhanVienPanel extends javax.swing.JPanel {
         NV.setTenNV(txtTenNV.getText());
         NV.setThamNien(txtThamNien.getText());
         NV.setSDT(txtSDT.getText());
-        NV.setMaCV(txtMaCV.getText());
+        
         //NV.setHinhAnh(lblimg.getToolTipText());
         if (rdoBanHang.isSelected()) {
             NV.setCongViec("Nhân Viên");
+            NV.setMaCV("CV03");
         } else if (rdoThuNgan.isSelected()) {
             NV.setCongViec("Thu Ngân");
+            NV.setMaCV("CV02");
         } else {
             NV.setCongViec("Quản Lý");
+            NV.setMaCV("CV01");
         }
         if (strHinh == null) {
-            NV.setHinhAnh("");
+            NV.setHinhAnh("Không có hình");
         } else {
             NV.setHinhAnh(strHinh);
         }
@@ -226,7 +232,15 @@ public class NhanVienPanel extends javax.swing.JPanel {
         if (!Validation.isPhone(txtSDT, "Số điện thoại sai định dạng! Số điện thoại phải đủ 10 số và số đầu là 0.")) {
             return false;
         }
-        if (!Validation.isEmpty(txtMaCV, "Mã công việc không được rỗng!")) {
+        ButtonModel m = null;
+        if(buttonGroup1.isSelected(m)){
+            JOptionPane.showMessageDialog(this, "Ban chua chon");
+            return false;
+        }
+        if (!Validation.isEmpty(txtTaiKhoan, "Tài Khoản không được rỗng!")) {
+            return false;
+        }
+        if (!Validation.isEmpty(txtMatKhau, "Mật Khẩu không được rỗng!")) {
             return false;
         }
 
@@ -263,7 +277,7 @@ public class NhanVienPanel extends javax.swing.JPanel {
 //        if (!Auth.isManager()) {
 //            JOptionPane.showMessageDialog(this, "Ban khong co quyen xoa!");
 //        } else {
-        int out = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa khách hàng này không ?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+        int out = JOptionPane.showConfirmDialog(this, "Bạn có chắc chắn muốn xóa nhân viên này không ?", "Xác nhận", JOptionPane.YES_NO_OPTION);
         if (!(out == JOptionPane.YES_OPTION)) {
         } else {
             String manv = txtMaNV.getText();
@@ -361,9 +375,7 @@ public class NhanVienPanel extends javax.swing.JPanel {
         txtThamNien.setText("");
         txtSDT.setText("");
         txtMaCV.setText("");
-        rdoBanHang.setSelected(false);
-        rdoThuNgan.setSelected(false);
-        rdoQuanLy.setSelected(false);
+        buttonGroup1.clearSelection();
         lblImg.setText("Hình Ảnh");
         lblImg.setIcon(null);
         txtTaiKhoan.setText("");
@@ -380,8 +392,8 @@ public class NhanVienPanel extends javax.swing.JPanel {
         txtMaCV.setText(tblNhanVien.getValueAt(row, 4).toString());
         if (tblNhanVien.getValueAt(row, 5).toString().equals("Nhân Viên")) {
             rdoBanHang.setSelected(true);
-            //rdoQuanLy.setSelected(false);
-            //rdoThuNgan.setSelected(false);
+            rdoQuanLy.setSelected(false);
+            rdoThuNgan.setSelected(false);
         }
         if (tblNhanVien.getValueAt(row, 5).toString().equals("Thu Ngân")) {
             rdoBanHang.setSelected(false);
@@ -421,6 +433,10 @@ public class NhanVienPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblNhanVien = new javax.swing.JTable();
@@ -665,14 +681,21 @@ public class NhanVienPanel extends javax.swing.JPanel {
         });
         add(txtMatKhau, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 190, 25));
 
+        buttonGroup1.add(rdoThuNgan);
         rdoThuNgan.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
         rdoThuNgan.setText("Thu Ngân");
         add(rdoThuNgan, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, -1, -1));
 
+        buttonGroup1.add(rdoQuanLy);
         rdoQuanLy.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
         rdoQuanLy.setText("Quản Lý");
         add(rdoQuanLy, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, -1));
 
+        txtMaCV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtMaCVMouseClicked(evt);
+            }
+        });
         txtMaCV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMaCVActionPerformed(evt);
@@ -687,6 +710,7 @@ public class NhanVienPanel extends javax.swing.JPanel {
         });
         add(txtTaiKhoan, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 190, 25));
 
+        buttonGroup1.add(rdoBanHang);
         rdoBanHang.setFont(new java.awt.Font("Times New Roman", 3, 16)); // NOI18N
         rdoBanHang.setText("Nhân Viên Bán Hàng");
         add(rdoBanHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, -1, -1));
@@ -737,7 +761,13 @@ public class NhanVienPanel extends javax.swing.JPanel {
             List<NhanVien> list = dao.selectAll();
             for (NhanVien NV : list) {
                 if (NV.getMaNV().equals(txtMaNV.getText())) {
-                    JOptionPane.showMessageDialog(this, "Không thể thêm! mã nhân viên đã tồn tại");
+                    JOptionPane.showMessageDialog(this, "Không thể thêm! Mã nhân viên đã tồn tại");
+                    check = 1;
+                    //txtMaKH.setBackground(Color.yellw);
+                    break;
+                }
+                if (NV.getSDT().equals(txtSDT.getText())) {
+                    JOptionPane.showMessageDialog(this, "Không thể thêm! Số điện thoại đã tồn tại");
                     check = 1;
                     //txtMaKH.setBackground(Color.yellow);
                     break;
@@ -806,17 +836,20 @@ public class NhanVienPanel extends javax.swing.JPanel {
                 st.setString(1, txtTenNV.getText());
                 st.setString(2, txtThamNien.getText());
                 st.setString(3, txtSDT.getText());
-                st.setString(4, txtMaCV.getText());
+                
                 if (rdoBanHang.isSelected()) {
                     st.setString(5, "Nhân Viên");
+                    st.setString(4, "CV03");
                 } else if (rdoThuNgan.isSelected()) {
                     st.setString(5, "Thu Ngân");
+                    st.setString(4, "CV02");
 
                 } else {
                     st.setString(5, "Quản Lý");
+                    st.setString(4, "CV01");
                 }
                 if (strHinh == null) {
-                    st.setString(6, "");
+                    st.setString(6, "Không có hình");
                 } else {
                     st.setString(6, strHinh);
                 }
@@ -903,6 +936,10 @@ public class NhanVienPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTaiKhoanActionPerformed
 
+    private void txtMaCVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtMaCVMouseClicked
+        JOptionPane.showMessageDialog(this, "Ban hay chon cong viec");
+    }//GEN-LAST:event_txtMaCVMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFirst;
@@ -913,6 +950,10 @@ public class NhanVienPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnXoa;
     private javax.swing.JButton btntiemKiem;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
